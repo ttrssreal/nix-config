@@ -22,12 +22,8 @@
       inherit (nixpkgs) lib;
 
       util = import ./util.nix { inherit util lib inputs; };
-      mkNixosUsers = hostname: def: lib.concatMapAttrs
-        (util.mkUserAtHost hostname def)
-        def.config.home-manager.users;
 
       jess = ./users/jess;
-
     in {
       devShells = util.mkDevShells nixpkgs [
         "x86_64-linux"
@@ -47,7 +43,11 @@
         ];
       };
 
-      homeConfigurations =
+      homeConfigurations = let
+        mkNixosUsers = hostname: def: lib.concatMapAttrs
+          (util.mkUserAtHost hostname def)
+          def.config.home-manager.users;
+      in
         lib.concatMapAttrs mkNixosUsers self.nixosConfigurations;
 
       templates = import ./templates;
