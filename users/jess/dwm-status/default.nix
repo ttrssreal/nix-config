@@ -1,7 +1,7 @@
 # TODO: Integrate `dwm-status`
 # Issue URL: https://github.com/ttrssreal/nix-config/issues/18
 #       https://github.com/Gerschtli/dwm-status
-#       Currently broken here
+#       Fucky when using startx :(
 {
   services.dwm-status = {
     enable = true;
