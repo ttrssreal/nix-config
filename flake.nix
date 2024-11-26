@@ -9,7 +9,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nixvim.url = "github:nix-community/nixvim";
-    # TODO: retire this
+    # TODO: Retire custom status bar
     # Issue URL: https://github.com/ttrssreal/nix-config/issues/11
     status-bar.url = "github:ttrssreal/status-bar";
     erosanix.url = "github:emmanuelrosa/erosanix";

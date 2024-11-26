@@ -2,7 +2,7 @@
 , inputs
 , ...
 }: util.mkOverlay (final: prev: {
-  # TODO: fix
+  # TODO: Fix binja overlay
   # Issue URL: https://github.com/ttrssreal/nix-config/issues/12
   # binja = final.callPackage (util.root /pkgs/binaryninja.nix) {};
 

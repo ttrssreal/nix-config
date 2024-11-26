@@ -11,7 +11,7 @@
   ];
 
   # define the nixos user
-  # TODO: put pw in agenix
+  # TODO: Put jess password in agenix
   users.users.jess = {
     description = "Jess";
     isNormalUser = true;
@@ -29,8 +29,7 @@
     ];
   };
 
-
-  # TODO: where to put this?
+  # TODO: Where to put system font config?
   fonts = {
     packages = with pkgs; [
       font-awesome

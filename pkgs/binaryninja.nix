@@ -36,8 +36,7 @@ stdenv.mkDerivation {
     qt6.full
   ];
 
-  # TODO: fix
-  # Issue URL: https://github.com/ttrssreal/nix-config/issues/13
+  # fix: already an issue for this
   src = /home/jess/misc/binaryninja_personal_linux.zip;
 
   buildPhase = ":";

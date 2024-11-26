@@ -5,10 +5,10 @@
     xgpro
     vscode
     discord
-    # TODO: manage profile in hm
+    # TODO: Manage firefox profiles in nix
     firefox
     flameshot
-    # TODO: manange config through nix
+    # TODO: Manange obsidian config in nix
     obsidian
     thunderbird
     spotify
