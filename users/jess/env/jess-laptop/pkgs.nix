@@ -11,6 +11,7 @@
     flameshot
     # TODO: Manange obsidian config in nix
     obsidian
+    # TODO: Manange thunderbird config in nix
     thunderbird
     spotify
     feh
