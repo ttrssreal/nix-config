@@ -12,6 +12,7 @@
     # TODO: Manange obsidian config in nix
     obsidian
     # TODO: Manange thunderbird config in nix
+    # Issue URL: https://github.com/ttrssreal/nix-config/issues/22
     thunderbird
     spotify
     feh
