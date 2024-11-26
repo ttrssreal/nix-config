@@ -1,4 +1,5 @@
 # TODO: how to do templates nicer?
+# Issue URL: https://github.com/ttrssreal/nix-config/issues/14?
 {
   shell = {
     path = ./shell;

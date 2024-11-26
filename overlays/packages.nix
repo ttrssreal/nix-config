@@ -3,6 +3,7 @@
 , ...
 }: util.mkOverlay (final: prev: {
   # TODO: fix
+  # Issue URL: https://github.com/ttrssreal/nix-config/issues/12
   # binja = final.callPackage (util.root /pkgs/binaryninja.nix) {};
 
   bt-con = final.callPackage (util.root /pkgs/bt-con.nix) {};

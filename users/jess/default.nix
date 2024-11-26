@@ -29,6 +29,7 @@
     ];
   };
 
+
   # TODO: where to put this?
   fonts = {
     packages = with pkgs; [

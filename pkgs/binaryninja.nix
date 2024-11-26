@@ -37,6 +37,7 @@ stdenv.mkDerivation {
   ];
 
   # TODO: fix
+  # Issue URL: https://github.com/ttrssreal/nix-config/issues/13
   src = /home/jess/misc/binaryninja_personal_linux.zip;
 
   buildPhase = ":";
