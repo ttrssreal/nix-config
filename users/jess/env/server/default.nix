@@ -6,6 +6,7 @@
   imports = lib.flatten [
     (userRoot + /base.nix)
     # TODO: server: (hacky+broken) using jess-laptop stuffs
+    # TODO: server: (hacky+broken) using jess-laptop stuffs
     #       xinit starts status bar with battery info
     #       but we dont have a battery D:
     ../jess-laptop/pkgs.nix

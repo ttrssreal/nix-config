@@ -6,7 +6,9 @@
     vscode
     discord
     # TODO: Manage firefox profiles in nix
+    # Issue URL: https://github.com/ttrssreal/nix-config/issues/19
     firefox
+    flameshot
     flameshot
     # TODO: Manange obsidian config in nix
     obsidian

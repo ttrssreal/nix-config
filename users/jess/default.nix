@@ -12,6 +12,7 @@
 
   # define the nixos user
   # TODO: Put jess password in agenix
+  # Issue URL: https://github.com/ttrssreal/nix-config/issues/16
   users.users.jess = {
     description = "Jess";
     isNormalUser = true;
@@ -28,6 +29,7 @@
       "docker"
     ];
   };
+
 
   # TODO: Where to put system font config?
   fonts = {
