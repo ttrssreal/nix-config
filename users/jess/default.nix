@@ -20,6 +20,8 @@
       ./id_ed25519.pub
     ];
     shell = pkgs.zsh;
+    # https://discourse.nixos.org/t/psa-pinning-users-uid-is-important-when-reinstalling-nixos-restoring-backups/21819
+    uid = 1000;
     # we install zsh via hm, so tell
     # nixos to not worry
     ignoreShellProgramCheck = true;
