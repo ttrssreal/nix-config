@@ -31,6 +31,9 @@ jobs:
           MANUAL_BASE_REF: ${{ inputs.MANUAL_BASE_REF }}
         with:
           INSERT_ISSUE_URLS: true
+          AUTO_ASSIGN: true
+          CLOSE_ISSUES: true
+          ESCAPE: false
 
       - name: Set Git user
         run: |
