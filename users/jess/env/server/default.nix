@@ -13,9 +13,8 @@
     ../jess-laptop/xinit.nix
 
     (util.pathsFrom userRoot [
-      # /dwm-status
       /alacritty
-      # /direnv
+      /direnv
       /gpg
       /nix
       /zsh
@@ -23,9 +22,7 @@
     ])
 
     (util.hmModules [
-      # /bt-con
       /picom
-      # /secrets
     ])
   ];
 
