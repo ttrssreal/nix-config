@@ -27,7 +27,7 @@
   ];
 
   jess.git.forceGithubSSH = false;
-  programs.alacritty.settings.font.size = lib.mkForce 11;
+  programs.alacritty.settings.font.size = lib.mkForce 10;
 
   home.homeDirectory = "/home/jess";
 }
