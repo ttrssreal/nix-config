@@ -1,6 +1,9 @@
 # basically scan all the hosts+users for secrets they define and their
 # public keys, then smush them all together
 
+# TODO: Rewrite all secret management stuffs :|
+#       At least we learnt a bit :3
+
 let
   flake = builtins.getFlake (builtins.toString ./.);
 
@@ -12,16 +15,18 @@ let
   ) nixosConfigurations;
 
   mapSecrets = mapPriv: identities: lib.flatten (lib.mapAttrsToList (n: v:
-    let
-      inherit (v.secrets) shared private pubKeyFile;
-      pubKey = let pubKeyRaw = builtins.readFile pubKeyFile;
-      in lib.trim pubKeyRaw;
-    in
-      (lib.mapAttrsToList (mapPriv n pubKey) private)
-      ++ (lib.mapAttrsToList
-        (secretName: _: { "secrets/${secretName}.age" = pubKey; })
-        shared
-      )
+    if v ? secrets then
+      let
+        inherit (v.secrets) shared private pubKeyFile;
+        pubKey = let pubKeyRaw = builtins.readFile pubKeyFile;
+        in lib.trim pubKeyRaw;
+      in
+        (lib.mapAttrsToList (mapPriv n pubKey) private)
+        ++ (lib.mapAttrsToList
+          (secretName: _: { "secrets/${secretName}.age" = pubKey; })
+          shared
+        )
+    else []
   ) identities);
 
   hostSecrets = mapSecrets (hostname: pubKey: secretName: _:
