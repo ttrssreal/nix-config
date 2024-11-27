@@ -28,6 +28,7 @@ in {
         ".envrc"
         ".env"
         ".local"
+        "result"
       ];
     };
   };
