@@ -32,7 +32,6 @@
     ];
   };
 
-
   # TODO: Where to put system font config?
   fonts = {
     packages = with pkgs; [
