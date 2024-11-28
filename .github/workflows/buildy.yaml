@@ -1,0 +1,28 @@
+name: Build system and cache it :3
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install nix
+        uses: DeterminateSystems/nix-installer-action@v16
+        with:
+          extra-conf: |
+            build-dir = /opt
+      - name: Magic
+        uses: DeterminateSystems/magic-nix-cache-action@v8
+
+      - name: Install omnix
+        run: nix --accept-flake-config profile install "github:juspay/omnix"
+
+      - name: Build everything
+        run: om ci run -- --refresh -j auto --keep-going
+
