@@ -7,7 +7,7 @@
     export _JAVA_AWT_WM_NONREPARENTING=1
 
     picom & # compositor
-    feh --bg-max --randomize ~/.wallpaper/* & # wallpaper
+    feh --bg-max --randomize ${./wallpaper}/* & # wallpaper
 
     LOG_FILE="/tmp/program_starter.log"
 
