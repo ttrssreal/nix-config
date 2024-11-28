@@ -2,6 +2,7 @@
 # public keys, then smush them all together
 
 # TODO: Rewrite all secret management stuffs :|
+# Issue URL: https://github.com/ttrssreal/nix-config/issues/29
 #       At least we learnt a bit :3
 
 let
